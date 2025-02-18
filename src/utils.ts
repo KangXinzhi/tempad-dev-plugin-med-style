@@ -49,13 +49,12 @@ export function removeMatchedStyles(style: Record<string, string>, rules: string
 // 尝试匹配所有可能的类
 export function tryMatchClasses(style: Record<string, string>): string[] {
   const matchedClasses: string[] = []
-  const remainingStyles = { ...style }
 
   // 尝试匹配所有类
   for (const [rules, className] of cssToMedMap.entries()) {
-    if (matchRules(remainingStyles, rules)) {
+    if (matchRules(style, rules)) {
       matchedClasses.push(className)
-      removeMatchedStyles(remainingStyles, rules)
+      removeMatchedStyles(style, rules)
     }
   }
 

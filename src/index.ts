@@ -20,7 +20,7 @@ export default definePlugin({
         return ''
       },
     },
-    // WZ 类名输出
+    // med 类名输出
     'a-className': {
       title: 'med className',
       lang: 'text',
