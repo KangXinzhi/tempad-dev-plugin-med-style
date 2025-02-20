@@ -4,7 +4,7 @@ import {
 } from './utils'
 
 export default definePlugin({
-  name: 'Med Style',
+  name: 'baidu-health/med-style',
   code: {
     'css': {
       title: 'delete-CSS',
